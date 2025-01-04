@@ -121,7 +121,7 @@ const Home = () => {
       <div className="relative py-24 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto relative">
           <div className="grid grid-cols-2 max-md:grid-cols-1 gap-24 items-center place-self-center">
-            <div className="space-y-8 w-1/2">
+            <div className="space-y-8 w-1/2 max-md:w-full">
               <div className="space-y-4">
                 <h2 className="text-4xl font-bold bg-gradient-to-r from-white to-red-200 bg-clip-text text-transparent">
                   Beautiful Design
