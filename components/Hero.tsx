@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Download, ArrowRight, Smartphone, Monitor } from "lucide-react";
+import { Download, ArrowRight } from "lucide-react";
 import { TypewriterEffect } from "./ui/typewriter-effect";
 
 export function Hero() {
