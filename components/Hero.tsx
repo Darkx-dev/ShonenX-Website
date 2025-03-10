@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Download, ArrowRight } from "lucide-react";
 import { TypewriterEffect } from "./ui/typewriter-effect";
+import Link from "next/link";
 
-export function Hero() {
+export function Hero({ latestRelease }: any) {
   const words = [
     { text: "ShonenX" },
     { text: "-" },
@@ -76,7 +77,14 @@ export function Hero() {
                 className="bg-primary hover:bg-primary/90 text-white px-8 rounded-full group"
               >
                 <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
-                Download Now
+
+                <a
+                  href={latestRelease.downloadLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download Now
+                </a>
               </Button>
               <Button
                 variant="outline"

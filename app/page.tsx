@@ -7,7 +7,7 @@ import { getReleasesData } from "@/utils/github";
 
 export default async function Home() {
   const data = await getReleasesData();
-  // const latestRelease = data.changelogs[0];
+  const latestRelease = data.versions[0];
 
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">
@@ -15,7 +15,7 @@ export default async function Home() {
       <div className="fixed inset-0 bg-gradient-radial from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
 
       <Navbar />
-      <Hero />
+      <Hero latestRelease={latestRelease} />
       <Features />
       <Downloads versions={data.versions} />
       <Footer />
