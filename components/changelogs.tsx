@@ -6,24 +6,24 @@ import { Card } from "@/components/ui/card";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-function parseMarkdown(text: string) {
-  if (!text) return '<p>No content available.</p>';
+// function parseMarkdown(text: string) {
+//   if (!text) return '<p>No content available.</p>';
 
-  let html = text
-    .replace(/^### (.+)$/gm, '<h3 class="text-lg font-semibold text-white mb-2">$1</h3>')
-    .replace(/^#### (.+)$/gm, '<h4 class="text-md font-medium text-gray-200 mb-1">$1</h4>')
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.+?)\*/g, '<em>$1</em>')
-    .replace(/`(.+?)`/g, '<code class="bg-gray-800 px-1 rounded">$1</code>')
-    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>')
-    .replace(/^- (.+)$/gm, '<li class="ml-4 flex items-start"><span class="text-blue-400 mr-2">•</span><span>$1</span></li>')
-    .replace(/\n\n/g, '</p><p>')
-    .replace(/\n/g, '<br>');
+//   let html = text
+//     .replace(/^### (.+)$/gm, '<h3 class="text-lg font-semibold text-white mb-2">$1</h3>')
+//     .replace(/^#### (.+)$/gm, '<h4 class="text-md font-medium text-gray-200 mb-1">$1</h4>')
+//     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+//     .replace(/\*(.+?)\*/g, '<em>$1</em>')
+//     .replace(/`(.+?)`/g, '<code class="bg-gray-800 px-1 rounded">$1</code>')
+//     .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>')
+//     .replace(/^- (.+)$/gm, '<li class="ml-4 flex items-start"><span class="text-blue-400 mr-2">•</span><span>$1</span></li>')
+//     .replace(/\n\n/g, '</p><p>')
+//     .replace(/\n/g, '<br>');
 
-  return `<div>${html}</div>`;
-}
+//   return `<div>${html}</div>`;
+// }
 
-export function Changelogs({ changelogs = [] }: any) {
+export function Changelogs({ changelogs = [] }) {
   return (
     <section id="changelogs" className="py-24 relative overflow-hidden">
       <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>

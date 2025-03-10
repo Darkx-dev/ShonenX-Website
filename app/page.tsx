@@ -7,7 +7,7 @@ import { getReleasesData } from "@/utils/github";
 
 export default async function Home() {
   const data = await getReleasesData();
-  const latestRelease = data.changelogs[0];
+  // const latestRelease = data.changelogs[0];
 
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">

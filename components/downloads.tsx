@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Download, Calendar, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Image from "next/image";
 
 export function Downloads({ versions }: any) {
   // Default version if no versions are provided
