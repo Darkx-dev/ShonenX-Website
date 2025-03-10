@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Download, ArrowRight } from "lucide-react";
 import { TypewriterEffect } from "./ui/typewriter-effect";
-import Link from "next/link";
 
 export function Hero({ latestRelease }: any) {
   const words = [
