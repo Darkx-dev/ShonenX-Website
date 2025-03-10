@@ -40,13 +40,13 @@ export function Navbar() {
             <Link href="/" className="text-white/80 hover:text-white transition-colors">
               Home
             </Link>
-            <Link href="#features" className="text-white/80 hover:text-white transition-colors">
+            <Link href="/#features" className="text-white/80 hover:text-white transition-colors">
               Features
             </Link>
-            <Link href="#downloads" className="text-white/80 hover:text-white transition-colors">
+            <Link href="/#downloads" className="text-white/80 hover:text-white transition-colors">
               Download
             </Link>
-            <Link href="#changelogs" className="text-white/80 hover:text-white transition-colors">
+            <Link href="changelogs" className="text-white/80 hover:text-white transition-colors">
               Changelogs
             </Link>
             <Link
@@ -58,9 +58,6 @@ export function Navbar() {
               <Github size={18} />
               <span>GitHub</span>
             </Link>
-            <Button className="bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white">
-              Contact
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,21 +88,21 @@ export function Navbar() {
                   Home
                 </Link>
                 <Link
-                  href="#features"
+                  href="/#features"
                   className="flex items-center gap-2 text-lg font-medium text-white/80 hover:text-white transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Features
                 </Link>
                 <Link
-                  href="#downloads"
+                  href="/#downloads"
                   className="flex items-center gap-2 text-lg font-medium text-white/80 hover:text-white transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Download
                 </Link>
                 <Link
-                  href="#changelogs"
+                  href="changelogs"
                   className="flex items-center gap-2 text-lg font-medium text-white/80 hover:text-white transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >

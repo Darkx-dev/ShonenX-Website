@@ -94,7 +94,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="mt-6 flex items-center justify-center md:justify-start gap-6"
             >
-              {/* <div className="flex items-center text-white/60">
+              {/* <div className="flex items-center text-white/60"
                 <Smartphone className="h-5 w-5 mr-2" />
                 <span>Android</span>
               </div> */}
