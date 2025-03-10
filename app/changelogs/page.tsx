@@ -4,7 +4,7 @@ import { Footer } from "@/components/footer";
 import { getReleasesData } from "@/utils/github";
 
 export default async function ChangelogPage() {
-  const data: any = {};
+  const data = await getReleasesData();
 
   return (
     <main className="min-h-screen bg-black text-white">
