@@ -287,7 +287,7 @@ export function Downloads({ versions }: any) {
 
                 <div>
                   <h4 className="font-medium text-primary mb-1">Windows</h4>
-                  <p className="text-white/70 text-sm">⏳ Coming Soon</p>
+                  <p className="text-white/70 text-sm">EXE installer</p>
                   <p className="text-white/70 text-sm">
                     Windows 10/11 (64-bit) with 4GB RAM minimum
                   </p>

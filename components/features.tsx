@@ -24,7 +24,7 @@ export function Features() {
     {
       icon: <Monitor className="h-6 w-6 text-primary" />,
       title: "Multi-platform",
-      description: "Currently available on Android, with Windows coming soon and Linux planned for the future."
+      description: "Currently available on Android, Windows and Linux planned for the future."
     },
     {
       icon: <Code className="h-6 w-6 text-primary" />,
