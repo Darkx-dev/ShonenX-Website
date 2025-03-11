@@ -31,7 +31,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <Link href="/" className="text-2xl flex flex-nowrap items-end">
-            <img src="https://github.com/Darkx-dev/ShonenX/raw/dev/assets/icons/app_icon-modified-2.png" alt="ShonenX" width={40}/>
+            <img src="https://github.com/Darkx-dev/ShonenX/raw/main/assets/icons/app_icon-modified-2.png" alt="ShonenX" width={40}/>
             honenX
           </Link>
 
