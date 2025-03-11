@@ -122,7 +122,7 @@ export function Downloads({ versions }: any) {
                       </svg>
                     </div>
                     <h3 className="text-xl font-semibold mb-2">Windows</h3>
-                    <p className="text-white/70 mb-4 text-sm">Coming soon</p>
+                    <p className="text-white/70 mb-4 text-sm">Install as administrator</p>
                   </div>
                   <Button
                     className="bg-primary hover:bg-primary/90 text-white rounded-full w-full group"
@@ -287,7 +287,7 @@ export function Downloads({ versions }: any) {
 
                 <div>
                   <h4 className="font-medium text-primary mb-1">Windows</h4>
-                  <p className="text-white/70 text-sm">EXE installer</p>
+                  <p className="text-white/70 text-sm">✅ Currently Available </p>
                   <p className="text-white/70 text-sm">
                     Windows 10/11 (64-bit) with 4GB RAM minimum
                   </p>
