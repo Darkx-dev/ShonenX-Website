@@ -6,22 +6,22 @@ import { Card } from "@/components/ui/card";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-// function parseMarkdown(text: string) {
-//   if (!text) return '<p>No content available.</p>';
+function parseMarkdown(text: string) {
+  if (!text) return '<p>No content available.</p>';
 
-//   let html = text
-//     .replace(/^### (.+)$/gm, '<h3 class="text-lg font-semibold text-white mb-2">$1</h3>')
-//     .replace(/^#### (.+)$/gm, '<h4 class="text-md font-medium text-gray-200 mb-1">$1</h4>')
-//     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-//     .replace(/\*(.+?)\*/g, '<em>$1</em>')
-//     .replace(/`(.+?)`/g, '<code class="bg-gray-800 px-1 rounded">$1</code>')
-//     .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>')
-//     .replace(/^- (.+)$/gm, '<li class="ml-4 flex items-start"><span class="text-blue-400 mr-2">•</span><span>$1</span></li>')
-//     .replace(/\n\n/g, '</p><p>')
-//     .replace(/\n/g, '<br>');
+  let html = text
+    .replace(/^### (.+)$/gm, '<h3 class="text-lg font-semibold text-white mb-2">$1</h3>')
+    .replace(/^#### (.+)$/gm, '<h4 class="text-md font-medium text-gray-200 mb-1">$1</h4>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/`(.+?)`/g, '<code class="bg-gray-800 px-1 rounded">$1</code>')
+    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">$1</a>')
+    .replace(/^- (.+)$/gm, '<li class="ml-4 flex items-start"><span class="text-blue-400 mr-2">•</span><span>$1</span></li>')
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/\n/g, '<br>');
 
-//   return `<div>${html}</div>`;
-// }
+  return `<div>${html}</div>`;
+}
 
 export function Changelogs({ changelogs = [] }) {
   return (
@@ -73,11 +73,11 @@ export function Changelogs({ changelogs = [] }) {
                 
                 <div className="space-y-4">
                   {/* Render description */}
-                  {/* {changelog.description && (
+                  {changelog.description && (
                     <div className="text-gray-300 prose prose-invert max-w-none leading-relaxed">
                       <div dangerouslySetInnerHTML={{ __html: parseMarkdown(changelog.description) }} />
                     </div>
-                  )} */}
+                  )}
                   
                   {/* Optionally render changes as a separate list */}
                   {changelog.changes && changelog.changes.length > 0 && (

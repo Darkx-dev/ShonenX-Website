@@ -81,7 +81,7 @@ export function Downloads({ versions }: any) {
                     asChild
                   >
                     <a
-                      href={latestVersion.downloadLink}
+                      href={latestVersion.android.downloadLink}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -92,7 +92,7 @@ export function Downloads({ versions }: any) {
                 </div>
               </Card>
 
-              {/* Windows - Coming Soon */}
+              {/* Windows */}
               <Card className="bg-gray-900/60 border border-gray-800 p-6 card-glow h-full">
                 <div className="flex flex-col items-center text-center h-full justify-between">
                   <div className="flex flex-col items-center">
@@ -125,11 +125,17 @@ export function Downloads({ versions }: any) {
                     <p className="text-white/70 mb-4 text-sm">Coming soon</p>
                   </div>
                   <Button
-                    className="bg-gray-800 text-white/50 rounded-full w-full cursor-not-allowed"
-                    disabled
+                    className="bg-primary hover:bg-primary/90 text-white rounded-full w-full group"
+                    asChild
                   >
-                    <Calendar className="mr-2 h-4 w-4" />
-                    Coming Soon
+                    <a
+                      href={latestVersion.windows.downloadLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Download className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
+                      Download
+                    </a>
                   </Button>
                 </div>
               </Card>

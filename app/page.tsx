@@ -15,7 +15,7 @@ export default async function Home() {
       <div className="fixed inset-0 bg-gradient-radial from-purple-900/20 via-transparent to-transparent pointer-events-none"></div>
 
       <Navbar />
-      <Hero latestRelease={latestRelease} />
+      <Hero latestRelease={latestRelease} totalDownloads={data.totalAppDownloads}/>
       <Features />
       <Downloads versions={data.versions} />
       <Footer />

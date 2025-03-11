@@ -78,7 +78,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#changelogs"
+                    href="changelogs"
                     className="text-white/60 hover:text-primary transition-colors"
                   >
                     Release Notes
