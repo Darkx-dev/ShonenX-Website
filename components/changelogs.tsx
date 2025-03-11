@@ -9,7 +9,7 @@ import remarkGfm from 'remark-gfm';
 function parseMarkdown(text: string) {
   if (!text) return '<p>No content available.</p>';
 
-  let html = text
+  const html = text
     .replace(/^### (.+)$/gm, '<h3 class="text-lg font-semibold text-white mb-2">$1</h3>')
     .replace(/^#### (.+)$/gm, '<h4 class="text-md font-medium text-gray-200 mb-1">$1</h4>')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
