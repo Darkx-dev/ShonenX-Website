@@ -13,7 +13,7 @@ export async function getReleasesData() {
 
   try {
     const octokit = new Octokit({
-      auth: process.env.GITHUB_TOKEN,
+      // auth: process.env.GITHUB_TOKEN,
     });
 
     const releases = await octokit.repos.listReleases({
