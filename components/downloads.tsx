@@ -2,17 +2,13 @@
 
 import { motion } from "framer-motion";
 import {
-  Download,
   Calendar,
   ArrowUpRight,
-  Loader2,
-  ArrowDownNarrowWideIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import ScrollFloat from "./blocks/TextAnimations/ScrollFloat/ScrollFloat";
-import SpotlightCard from "./blocks/Components/SpotlightCard/SpotlightCard";
 import { PlatformCard } from "./PlatformCard";
 
 export function Downloads({ versions }: any) {

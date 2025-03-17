@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Menu, X, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import GooeyNav from "./blocks/Components/GooeyNav/GooeyNav";
 import Magnet from "@/src/blocks/Animations/Magnet/Magnet";
 
 export function Navbar() {

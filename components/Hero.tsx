@@ -17,9 +17,9 @@ export function Hero({
 }) {
   const [isClient, setIsClient] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const desktopScreenshot = "/screenshots/desktop/home.jpg";
-  const mobileScreenshot = "/screenshots/mobile/home.jpg";
-  const streamScreenshot = "/screenshots/mobile/stream.jpg";
+  // const desktopScreenshot = "/screenshots/desktop/home.jpg";
+  // const mobileScreenshot = "/screenshots/mobile/home.jpg";
+  // const streamScreenshot = "/screenshots/mobile/stream.jpg";
 
   useEffect(() => {
     setIsClient(true);
