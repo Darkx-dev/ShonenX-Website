@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Calendar, Tag } from "lucide-react";
-import { Card } from "@/components/ui/card";
+import { Card } from "@/src/components/ui/card";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 

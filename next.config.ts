@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   env: {
     GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+    DISCORD_INVITE: process.env.DISCORD_INVITE
   },
   images: {
     remotePatterns: [

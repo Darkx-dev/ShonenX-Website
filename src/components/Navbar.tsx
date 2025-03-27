@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Github } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/src/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import Magnet from "@/src/blocks/Animations/Magnet/Magnet";
 

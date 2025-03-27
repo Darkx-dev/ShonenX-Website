@@ -1,7 +1,7 @@
-import { Changelogs } from "@/components/changelogs";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/footer";
-import { getReleasesData } from "@/utils/github";
+import { Changelogs } from "@/src/components/changelogs";
+import { Navbar } from "@/src/components/Navbar";
+import { Footer } from "@/src/components/footer";
+import { getReleasesData } from "@/src/utils/github";
 
 export default async function ChangelogPage() {
   const data = await getReleasesData();

@@ -1,10 +1,10 @@
 "use client";
-import { Downloads } from "@/components/downloads";
-import { Features } from "@/components/features";
-import { Footer } from "@/components/footer";
-import { Hero } from "@/components/Hero";
-import { Navbar } from "@/components/Navbar";
-import { getReleasesData } from "@/utils/github";
+import { Downloads } from "@/src/components/downloads";
+import { Features } from "@/src/components/features";
+import { Footer } from "@/src/components/footer";
+import { Hero } from "@/src/components/Hero";
+import { Navbar } from "@/src/components/Navbar";
+import { getReleasesData } from "@/src/utils/github";
 import { useEffect, useState } from "react";
 
 export default function Home() {

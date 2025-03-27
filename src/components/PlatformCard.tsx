@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/src/components/ui/button";
+import { Badge } from "@/src/components/ui/badge";
 import { Download, Calendar, Loader2 } from "lucide-react";
 import SpotlightCard from "./blocks/Components/SpotlightCard/SpotlightCard";
 import { ReactNode } from "react";

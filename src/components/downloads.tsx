@@ -5,8 +5,8 @@ import {
   Calendar,
   ArrowUpRight,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/src/components/ui/button";
+import { Badge } from "@/src/components/ui/badge";
 import { useState } from "react";
 import ScrollFloat from "./blocks/TextAnimations/ScrollFloat/ScrollFloat";
 import { PlatformCard } from "./PlatformCard";
@@ -130,7 +130,7 @@ export function Downloads({ versions }: any) {
         </svg>
       ),
       description: "Join Community",
-      downloadLink: "https://discord.gg/zCScP7Y6",
+      downloadLink: process.env.DISCORD_INVITE,
       status: "available",
       requirements: "Get updates & support",
     },
