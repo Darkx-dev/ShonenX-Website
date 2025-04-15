@@ -1,14 +1,12 @@
 import { Octokit } from "@octokit/rest";
-
-let cachedReleasesData: any = null;
-let lastFetched: any = null;
-const CACHE_DURATION = 60 * 60 * 1000; // 1 hour in milliseconds
+import { readCache, writeCache, isCacheValid } from "./cache";
 
 export async function getReleasesData() {
-  const now = Date.now();
-  if (cachedReleasesData && lastFetched && now - lastFetched < CACHE_DURATION) {
-    console.log("Returning cached releases data");
-    return cachedReleasesData;
+  // Try to read from cache first
+  const cachedData = await readCache();
+  if (cachedData && isCacheValid(cachedData.lastUpdated)) {
+    console.log("Serving from cache");
+    return cachedData;
   }
 
   try {
@@ -21,8 +19,6 @@ export async function getReleasesData() {
       repo: "ShonenX",
       per_page: 12,
     });
-
-    // console.log("Raw releases data:", releases.data);
 
     const versions = releases.data.map((release) => {
       const androidAsset = release.assets.find((asset) =>
@@ -111,13 +107,29 @@ export async function getReleasesData() {
       return total + release.assets.reduce((assetTotal, asset) => assetTotal + asset.download_count, 0);
     }, 0);
 
-    cachedReleasesData = { versions, changelogs, totalAppDownloads };
-    lastFetched = now;
-    console.log("Fetched and cached releases data");
-    console.log(cachedReleasesData);
-    return cachedReleasesData;
+    const data = { 
+      versions, 
+      changelogs, 
+      totalAppDownloads,
+      lastUpdated: Date.now()
+    };
+
+    // Write to cache
+    await writeCache(data);
+    console.log("Updated cache with fresh data");
+    
+    return data;
   } catch (error) {
     console.error("Error fetching releases:", error);
-    return { versions: [], changelogs: [], totalAppDownloads: 0 };
+    
+    // If fetch fails, try to serve stale cache as fallback
+    const staleCache = await readCache();
+    if (staleCache) {
+      console.log("Serving stale cache after fetch error");
+      return staleCache;
+    }
+    
+    // If no cache exists, return empty data
+    return { versions: [], changelogs: [], totalAppDownloads: 0, lastUpdated: 0 };
   }
 }
